@@ -2,54 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Document</title>
-    <script>
-        //应用比例布局，屏幕的尺寸/设计图的尺寸确定比例关系，移动端不会出现小数尺寸，因而要扩大100倍
-        function resize(originsize,type){
-            var type=type||"x";
-            var widths=document.documentElement.clientWidth;
-            var heights=document.documentElement.clientHeight;
-            if(type=="x"){
-                var scale=widths/originsize*100;
-            }else if(type=="y"){
-                var scale=heights/originsize*100;
-            }
-
-            document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
-        }
-        window.onload=function(){
-            resize(1334,"y")
-        }
-    </script>
-<style>
-    body,html{
-        margin:0;padding:0;
-        background:#ccc;
-    }
-    .box{
-        width:7.5rem;
-        height:3rem;
-        background:plum;
-    }
-    .left{
-        width:3rem;
-        height:2rem;
-        background:yellow;
-        float:left;
-    }
-    .right{
-        width:4.5rem;
-        height:2rem;
-        background:green;
-        float:left;
-    }
-</style>
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
+    <link rel="stylesheet" href="dist/css/animate.min.css">
+    <link rel="stylesheet" href="dist/css/app1.css">
+    <script src="dist/js/swiper.jquery.js"></script>
+    <script src="dist/js/zepto.min.js"></script>
+    <script src="dist/js/swiper.min.js"></script>
+    <script src="dist/js/swiper.animate1.0.2.min.js "></script>
+    <script src="dist/js/index.js"></script>
 </head>
 <body>
-<div class="box">
-    <div class="left"></div>
-    <div class="right"></div>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <!--第一屏-->
+        <div class="swiper-slide">
+            <header>
+                <div class="menu"></div>
+                <div class="tit">木愉新闻</div>
+                <div class="huiyuan"></div>
+            </header>
+            <div class="nav">
+                <a href="" class="active">头条</a>
+                <a href="">热点</a>
+                <a href="">娱乐</a>
+                <a href="">军事</a>
+                <a href="">体育</a>
+                <a href="">科技</a>
+            </div>
+            <div class="banner">
+                <a href="">
+                    <img src="img/ban1.jpg" alt="">
+                    <div class="mask">习近平：推进军队规模结构和力量编成改革</div>
+                </a>
+
+            </div>
+            <div class="lists">
+                <ul>
+                    <li>
+                        <div class="imgleft"><a href=""><img src="img/li1.jpg" alt=""></a></div>
+                        <div class="textright">
+                            <a href="">为罗一笑募捐的背后：乞讨的尊严和底线</a>
+                            <p>如果乞讨的人本身并不觉得做乞丐是一件丢人的事情，施舍的人恐怕无论做什么都无法刺痛这个乞丐。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgleft"><a href=""><img src="img/li2.jpg" alt=""></a></div>
+                        <div class="textright">
+                            <a href="">为罗一笑募捐的背后：乞讨的尊严和底线</a>
+                            <p>如果乞讨的人本身并不觉得做乞丐是一件丢人的事情，施舍的人恐怕无论做什么都无法刺痛这个乞丐。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgleft"><a href=""><img src="img/li3.jpg" alt=""></a></div>
+                        <div class="textright">
+                            <a href="">为罗一笑募捐的背后：乞讨的尊严和底线</a>
+                            <p>如果乞讨的人本身并不觉得做乞丐是一件丢人的事情，施舍的人恐怕无论做什么都无法刺痛这个乞丐。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgleft"><a href=""><img src="img/li4.jpg" alt=""></a></div>
+                        <div class="textright">
+                            <a href="">为罗一笑募捐的背后：乞讨的尊严和底线</a>
+                            <p>如果乞讨的人本身并不觉得做乞丐是一件丢人的事情，施舍的人恐怕无论做什么都无法刺痛这个乞丐。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer">
+                <a href="">首页</a>
+                <a href="">论坛</a>
+                <a href="">关注</a>
+                <a href="">我的</a>
+            </div>
+        </div>
+       <!--第二屏-->
+        <div class="swiper-slide">
+            <header>
+                <div class="menu"></div>
+                <div class="tit">木愉新闻</div>
+                <div class="huiyuan"></div>
+            </header>
+            <div class="nav">
+                <a href="">头条</a>
+                <a href="" class="active">热点</a>
+                <a href="">娱乐</a>
+                <a href="">军事</a>
+                <a href="">体育</a>
+                <a href="">科技</a>
+            </div>
+            <div class="banner">
+                <a href=""><img src="img/ban121.jpg" alt=""></a>
+            </div>
+            <div class="lists-menu">
+                <ul>
+                    <li>
+                        <a href=""></a>
+                    </li>
+                    <li>
+                        <a href=""></a>
+                    </li>
+                    <li>
+                        <a href=""></a>
+
+                    </li>
+                    <li>
+                        <a href=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer">
+                <a href="">首页</a>
+                <a href="">论坛</a>
+                <a href="">关注</a>
+                <a href="">我的</a>
+            </div>
+
+        </div>
+
+
+
+        <
+    </div>
 </div>
+
+
+
 </body>
 </html>

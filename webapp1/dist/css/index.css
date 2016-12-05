@@ -85,10 +85,9 @@ body,html{
     background:#060606;
 }
 .bg3{
-    width:4.5rem;
+    width:4rem;
     height:2.8rem;
     background:url(../../img/bg3.png) no-repeat;
-    background-size:contain;
     position:absolute;
     top:15%;
     left:0;right:0;bottom:0;
@@ -98,7 +97,6 @@ body,html{
     width: 3.6rem;
     height: 0.8rem;
     background: url(../../img/bg4.png) no-repeat;
-    background-size:contain;
     position: absolute;
     top:35%;
     left:0;right:0;bottom:0;

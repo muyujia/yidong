@@ -1,0 +1,210 @@
+body,html,ul,li,p{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+    box-sizing:border-box;
+}
+body,html{
+    width:100%;
+    height:100%;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size:14px;
+    color:#000;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    /*font-size: 1rem;*/
+    background:#181816;
+    position:relative;
+}
+/*公共类*/
+header{
+    width:100%;
+    height:0.8rem;
+    background:#274D90;
+
+}
+.menu{
+    width:0.6rem;
+    height:0.6rem;
+    position:absolute;
+    left:0.15rem;top:0.1rem;
+    background:url(../../img/menu.png) no-repeat;
+    background-size:contain;
+}
+.tit{
+    width:1.4rem;
+    height:0.8rem;
+    /*background:#000;*/
+    position:absolute;
+    left:42%;
+    color:#fff;
+    text-align:center;
+    line-height:0.8rem;
+    font-size:0.3rem;
+}
+.huiyuan{
+    width:0.6rem;
+    height:0.6rem;
+    background:url(../../img/huiyuan.png);
+    background-size:contain;
+    position:absolute;
+    right:0.15rem;top:0.1rem;
+}
+.title{
+    width:100%;
+    height:1rem;
+    background:yellow;
+}
+.nav{
+    width:100%;
+    height:1rem;
+    background:#000;
+    display:flex;
+    display:-webkit-box;
+}
+.nav a{
+    font-size:0.4rem;
+    color:#fff;
+    text-decoration:none;
+    text-align:center;
+    justify-content:space-around;
+    -webkit-box-pack:justify;
+    line-height:1rem;
+    padding:0 0.18rem;
+}
+.nav .active{
+    color:red;
+}
+.banner{
+    width:100%;
+    height:2.5rem;
+    /*background:#093540;*/
+    position:relative;
+}
+.banner img{
+    width:100%;
+    height:100%;
+}
+.banner .mask{
+    width:100%;
+    height:0.5rem;
+    position:absolute;
+    bottom:0;left:0;
+    background:rgba(255,0,0,0.6);
+    font-size:0.3rem;
+    color:#fff;
+    line-height:0.5rem;
+}
+.lists{
+    width:100%;
+    height:8rem;
+    /*background:yellow;*/
+}
+.lists ul li{
+    width:100%;
+    height:2rem;
+    border-bottom:0.01rem solid#fff;
+    display:flex;
+}
+.imgleft{
+    width:2rem;
+    height:1.5rem;
+    background:red;
+    margin-top:0.3rem;
+}
+.imgleft img{
+    width:100%;
+    height:100%;
+}
+.textright{
+    width:5.5rem;
+    height:2rem;
+    /*background:pink;*/
+    position:relative;
+}
+.textright a{
+    display:block;
+    font-size:0.25rem;
+    font-weight:bold;
+    text-decoration:none;
+    color:#ccc;
+    /*background:red;*/
+    line-height:0.5rem;
+    margin-top:0.3rem;
+}
+.textright p{
+    /*background:blue;*/
+    font-size:0.2rem;
+    color:#fff;
+    line-height:0.5rem;
+    text-indent:0.72rem;
+}
+.footer{
+    width:100%;
+    height:0.95rem;
+    background:rgba(0,0,0,0.4);
+}
+.footer a{
+    font-size:0.3rem;
+    color:#fff;
+    text-decoration:none;
+    text-align:center;
+    justify-content:space-around;
+    -webkit-box-pack:justify;
+    line-height:0.95rem;
+    padding:0 0.6rem;
+}
+
+.lists-menu{
+    width:100%;
+    height:8rem;
+    background:plum;
+}
+.lists-menu ul li{
+    width:50%;
+    height:4rem;
+    background:green;
+    float:left;
+}
+.lists-menu ul li:nth-child(1) {
+    border-right: 0.02rem solid #fff;
+    border-bottom:0.02rem solid#fff;
+    background:url(../../img/ban122.jpg) no-repeat;
+    background-size:cover;
+}
+.lists-menu ul li:nth-child(2){
+    border-bottom:0.02rem solid#fff;
+    background:url(../../img/ban123.jpg) no-repeat;
+    background-size:cover;
+}
+.lists-menu ul li:nth-child(3){
+    border-right:0.02rem solid#fff;
+    background:url(../../img/ban124.jpg) no-repeat;
+    background-size:cover;
+}
+.lists-menu ul li:nth-child(4){
+    border-right:0.02rem solid#fff;
+    background:url(../../img/ban125.jpg) no-repeat;
+    background-size:cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
