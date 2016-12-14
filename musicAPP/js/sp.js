@@ -1,5 +1,5 @@
 $(function(){
-// 设置比例大小，进行比例布局
+    // 设置比例大小，进行比例布局
     function resize(originsize,type){
         var type=type||"x";
         var widths=document.documentElement.clientWidth;
@@ -30,9 +30,4 @@ $(function(){
             swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
         }
     })
-
-
-
-
-
 })
