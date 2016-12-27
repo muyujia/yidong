@@ -146,7 +146,7 @@ $(function(){
     })
 
 
-
+    //将图像画到画布中
     $(".amlist:eq(7) input").click(function(){
         var file=document.querySelector("input[type='file']");
         var img=document.querySelector("img");
