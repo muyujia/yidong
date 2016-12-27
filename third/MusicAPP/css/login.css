@@ -1,0 +1,94 @@
+.bg{
+    width:100%;
+    height:13.34rem;
+    background:url(../img/loginbg.jpg) no-repeat;
+    background-size:100%  13.34rem;
+    position:relative;
+}
+.mask{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    float:left;
+    position:relative;
+}
+.welcome{
+    width:100%;
+    height:1rem;
+    /*background:red;*/
+    margin-top:2.5rem;
+    text-align:center;
+    line-height:1rem;
+    color:#fff;
+    font-size:0.5rem;
+}
+.user{
+    width:5rem;
+    height:0.8rem;
+    background:rgba(0,0,0,0.65);
+    position:absolute;
+    top:5rem;
+    left:20%;
+    border-radius:0.2rem;
+}
+.pass{
+    width:5rem;
+    height:0.8rem;
+    background:rgba(0,0,0,0.65);
+    position:absolute;
+    top:6.5rem;
+    left:20%;
+    border-radius:0.2rem;
+}
+input{
+    width:85%;
+    height:100%;
+    border:none;
+    background:rgba(0,0,0,0);
+    border-radius:0.2rem;
+    color:#CECECE;
+    font-size:0.3rem;
+    position:absolute;
+    left:0.8rem;
+}
+img{
+    width:0.4rem;
+    height:0.4rem;
+    margin-top:0.2rem;
+    margin-left:0.2rem;
+}
+.loginbox{
+    width:5rem;
+    height:0.8rem;
+    position:absolute;
+    top:8rem;
+    left:20%;
+    background:#EACB20;
+    border-radius:0.45rem;
+    text-align:center;
+    line-height:0.8rem;
+    font-size:0.35rem;
+}
+.loginbox a{
+    color:#000;
+}
+.foot{
+    width:5rem;
+    height:1rem;
+    /*background:red;*/
+    position:absolute;
+    top:9rem;
+    left:20%;
+    line-height:1rem;
+    text-align:center;
+    color:#cecece;
+    font-size:0.35rem;
+}
+.forget{
+    padding:0 0.3rem;
+    color:#cecece;
+}
+.reg{
+    padding:0 0.3rem;
+    color:#cecece;
+}

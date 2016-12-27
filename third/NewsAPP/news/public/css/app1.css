@@ -1,0 +1,165 @@
+.menu{
+    width:0.6rem;
+    height:0.6rem;
+    position:absolute;
+    left:0.15rem;top:0.1rem;
+    background:url(../img/menu.png) no-repeat;
+    background-size:contain;
+}
+.tit{
+    width:1.6rem;
+    height:0.8rem;
+    /*background:#000;*/
+    position:absolute;
+    left:40%;
+    color:#fff;
+    text-align:center;
+    line-height:0.8rem;
+    font-size:0.4rem;
+}
+.huiyuan{
+    width:0.6rem;
+    height:0.6rem;
+    background:url(../img/huiyuan.png);
+    background-size:contain;
+    position:absolute;
+    right:0.15rem;top:0.1rem;
+}
+.content{
+    width:100%;
+    height:12rem;
+    /*background:yellow;*/
+    position:absolute;
+    top:0.8rem;
+}
+.nav{
+    width:100%;
+    height:1rem;
+    background:#000;
+}
+.nav ul{
+    width:100%;
+    height:100%;
+    display:-webkit-box;
+    display:flex;
+}
+.nav ul li{
+    width:25%;
+    height:100%;
+    text-align:center;
+    justify-content:space-between;
+    /*-webkit-box-pack:justify;*/
+}
+.nav a{
+    font-size:0.35rem;
+    color:#fff;
+    line-height:1rem;
+    /*padding:0 0.2rem;*/
+}
+.nav .active{
+    color:red;
+}
+.banner img{
+    width:100%;
+    height:3rem;
+}
+.banner .mask{
+    width:100%;
+    height:0.5rem;
+    position:absolute;
+    bottom:0;left:0;
+    background:rgba(255,255,255,0.4);
+    font-size:0.3rem;
+    color:#000;
+    line-height:0.5rem;
+    text-align:center;
+}
+.con-list{
+    width:95%;
+    /*background:plum;*/
+    margin:0 auto;
+    padding-top:0.5rem;
+}
+.newest{
+    width:100%;
+    /*height:1.6rem;*/
+    position:relative;
+}
+.newest span{
+    width:100%;
+    font-size: 0.35rem;
+    font-weight:bold;
+}
+.newest ul li{
+    width:100%;
+    height:2rem;
+    /*background:green;*/
+    margin:0 auto;
+    border-bottom:0.03rem solid#ccc;
+}
+. ul li:nth-child(1){
+    margin-top:0.2rem;
+}
+.newest ul li a{
+    width:100%;
+    height:1.8rem;
+    display:flex;
+    text-decoration:none;
+}
+.news-left{
+    width:2rem;
+    height:1.6rem;
+    /*background:yellow;*/
+    margin-top:0.1rem;
+}
+.news-left img{
+    display: block;
+    width:2rem;
+    height:1.6rem;
+}
+.news-right{
+    width:5rem;
+    height:1.8rem;
+    /*background:gray;*/
+    margin-top:0.1rem;
+    font-size:0.35rem;
+    color:#000;
+    line-height:0.6rem;
+}
+.newest2{
+    width:100%;
+    position:relative;
+    padding-top:0.3rem;
+    padding-bottom:1.2rem;
+}
+.newest2 span{
+    width:100%;
+    font-size: 0.35rem;
+    font-weight:bold;
+}
+.newest2 ul{
+    width:100%;
+    display:flex;
+}
+.newest2 ul li{
+    width:2rem;
+    height:2rem;
+    background:green;
+    border-bottom:0.03rem solid#ccc;
+    margin-right:0.5rem;
+}
+.newest2 img{
+    display: block;
+    width:2.2rem;
+    height:2rem;
+}
+
+
+
+
+
+
+
+
+
+

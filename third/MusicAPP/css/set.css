@@ -1,0 +1,72 @@
+body{
+    background:#171614;
+}
+.touxiang{
+    width:2.5rem;
+    height:2.5rem;
+    border-radius:50%;
+    margin:0 auto;
+    margin-top:0.5rem;
+}
+.touxiang img{
+    width:2.5rem;
+    height:2.5rem;
+    border-radius:50%;
+}
+.title{
+    width:100%;
+    height:0.6rem;
+    font-size:0.35rem;
+    color:#B99C3F;
+    line-height:0.6rem;
+    text-align:center;
+}
+.con{
+    width:100%;
+    /*background:yellow;*/
+}
+.con ul li{
+    width:100%;
+    height:1.2rem;
+    border-bottom:0.01rem solid#BA9C39;
+    display:-webkit-box;
+    display:flex;
+}
+.con .left{
+    width:3.5rem;
+    height:100%;
+    /*background:pink;*/
+    display:flex;
+    margin-left:10%;
+}
+.con p{
+    font-size:0.35rem;
+    color:#fff;
+    line-height:1.2rem;
+    margin-left:0.3rem;
+}
+.con .flag{
+    width:0.4rem;
+    height:0.4rem;
+    margin-top:0.4rem;
+}
+.con .xiaji{
+    width:0.4rem;
+    height:0.4rem;
+    /*background:green;*/
+    margin-top:0.4rem;
+    margin-left:30%;
+}
+.loginout{
+    width:3rem;
+    height:0.8rem;
+    border:0.01rem solid#BA9C39;
+    border-radius:0.15rem;
+    margin:0 auto;
+    margin-top:0.8rem;
+    line-height:0.8rem;
+    text-align:center;
+}
+.loginout a{
+    color:#fff;
+}

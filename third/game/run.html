@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/run.css">
+    <script src="js/hitPix.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/run.js"></script>
+    <script src="js/game.js"></script>
+</head>
+<body>
+<audio src="audio/run.wav" class="vrun" loop></audio>
+<audio src="audio/fly.wav" class="vjump"></audio>
+<audio src="audio/hit.wav" class="hit"></audio>
+<audio src="audio/zidan.wav" class="ball"></audio>
+<div class="start text-center" >
+    <div class="welcome">阿狸酷跑</div>
+    <button class="btn btn-success" type="button">开始游戏</button>
+</div>
+<div class="life">生命值:<span>3</span></div>
+<div class="grade">分数:<span>0</span></div>
+<div class="lifebox">
+  <div class="progress"></div>
+</div>
+<div class="mask"></div>
+
+<div class="over text-center">
+    <div class="curscore">Game over!<br>当前分数:<span class="scoreEle">0</span></div>
+    <ul></ul>
+    <button class="btn btn-primary again" type="button">再来一次</button>
+</div>
+<canvas></canvas>
+<!--<img src="img/run1.png" alt="" class="run" hidden>-->
+<!--<img src="img/run1.png" alt="" class="run" hidden>-->
+<!--<img src="img/run1.png" alt="" class="run" hidden>-->
+<!--<img src="img/run1.png" alt="" class="run" hidden>-->
+<!--<img src="img/run1.png" alt="" class="run" hidden>-->
+<!--<img src="img/run1.png" alt="" class="run" hidden>-->
+<!--<img src="img/run1.png" alt="" class="run" hidden>-->
+<!--<img src="img/run1.png" alt="" class="run" hidden>-->
+
+
+<img src="img/person/ali1.png" alt="" class="run" hidden>
+<img src="img/person/ali2.png" alt="" class="run" hidden>
+<img src="img/person/ali3.png" alt="" class="run" hidden>
+<img src="img/person/ali4.png" alt="" class="run" hidden>
+<img src="img/person/ali5.png" alt="" class="run" hidden>
+<img src="img/person/ali6.png" alt="" class="run" hidden>
+<img src="img/person/jump.png" alt="" class="jump" hidden>
+
+<img src="img/hinder/boom.png" alt="" class="hinder" hidden>
+<img src="img/hinder/chick.png" alt="" class="hinder" hidden>
+<img src="img/hinder/egg.png" alt="" class="hinder" hidden>
+<img src="img/hinder/flow.png" alt="" class="hinder" hidden>
+<img src="img/hinder/grass.png" alt="" class="hinder" hidden>
+<img src="img/hinder/pail.png" alt="" class="hinder" hidden>
+<img src="img/hinder/stone.png" alt="" class="hinder" hidden>
+<img src="img/hinder/tree.png" alt="" class="hinder" hidden>
+
+</body>
+</html>
+<!--<script>-->
+    <!--var canvas=document.querySelector("canvas");-->
+    <!--var cobj=canvas.getContext("2d");-->
+    <!--function obj(){-->
+        <!--this.x=0;-->
+        <!--this.y=0;-->
+        <!--this.width=100;-->
+        <!--this.height=100;-->
+        <!--this.speed=2;-->
+    <!--}-->
+
+    <!--obj.prototype={-->
+        <!--draw:function(){-->
+            <!--cobj.save();-->
+            <!--cobj.translate(this.x,this.y);-->
+            <!--cobj.beginPath();-->
+            <!--cobj.moveTo(20,0);-->
+            <!--cobj.quadraticCurveTo(50,100,100,0);-->
+            <!--cobj.closePath();-->
+            <!--cobj.fill();-->
+            <!--cobj.restore();-->
+        <!--},-->
+        <!--update:function(){-->
+            <!--this.x+=this.speed;-->
+        <!--}-->
+    <!--}-->
+
+    <!--var obj1=new obj();-->
+    <!--var obj2=new obj();-->
+    <!--obj2.x=500;-->
+    <!--obj2.speed=-2;-->
+    <!--setInterval(function(){-->
+        <!--cobj.clearRect(0,0,800,600);-->
+        <!--obj1.update();-->
+        <!--obj1.draw();-->
+        <!--obj2.update();-->
+        <!--obj2.draw();-->
+        <!--if(hitPix(canvas,cobj,obj1,obj2)){-->
+            <!--alert(1);-->
+        <!--}-->
+    <!--},30)-->
+<!--</script>-->

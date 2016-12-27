@@ -1,0 +1,149 @@
+@import "var.less";
+
+//.radius(@r1:50%,@r2:50%,@r3:50%,@r4:50%){
+//  -webkit-border-radius:@arguments;
+//  -moz-border-radius:@arguments;
+//  -o-border-radius:@arguments;
+//  -ms-border-radius:@arguments;
+//  border-radius:@arguments;
+//}
+//.shadow(@type:0,@x:0,@y:0,@b:10px,@c:#000) when (@type=0){
+//  -webkit-box-shadow:@x @y @b @c;
+//  -moz-box-shadow:@x @y @b @c;
+//  -o-box-shadow:@x @y @b @c;
+//  -ms-box-shadow:@x @y @b @c;
+//  box-shadow:@x @y @b @c;
+//}
+//.shadow(@type:1,@x:0,@y:0,@b:10px,@c:#000) when (@type=1){
+//  -webkit-box-shadow:@x @y @b @c inset;
+//  -moz-box-shadow:@x @y @b @c inset;
+//  -o-box-shadow:@x @y @b @c inset;
+//  -ms-box-shadow:@x @y @b @c inset;
+//  box-shadow:@x @y @b @c inset;
+//}
+//循环结构
+//.loop (@i:1) when(@i<5){
+//  .col-s-@{i}{
+//      width:100px*@i;
+//      height:100px*@i;
+//  }
+//  .loop(@i+1);
+//}
+//.loop;
+//
+//.clear(){
+//  &:before,&:after{
+//    content:"";
+//    display:block;
+//  }
+//  &:after{
+//    clear:both;
+//  }
+//}
+
+//div{
+//  width:@width;
+//  height:@width;
+//  border:2px solid plum;
+//  .radius(20%,20%,20%);
+//  .shadow(0);
+//}
+//.box{
+//    width:@width;
+//    height:@width;
+//    border:1px solid #000;
+//    margin-left:20px;
+//    margin-top:20px;
+//    border-image-source:url(../border1.jpg);
+//    border-image-width:20px;
+//    border-image-slice:45%;
+//    border-image-repeat:round;
+//    border-image-outset:20px;
+//   .clear();
+//}
+//div{
+//  & {width:200px;}
+//  & span{width:100px;}
+//}
+
+*{box-sizing:border-box;}
+.container{
+  //固定布局
+  &{width:@num1*1-@minWidth;height:auto;margin:auto;}
+  &>.row{width:100%;.clear;}
+  //流式布局
+  &-fluid{width:100%;height:auto;margin:auto;}
+  &-fluid>.row{width:100%;margin:auto;.clear;}
+}
+.loop(s);
+.col-s-hide{
+  display:none;
+}
+
+//中屏
+@media screen and (min-width:@num1){
+  .loop(m);
+  .container{width:@num1;}
+  .col-s-hide{
+    display:block;
+  }
+  .col-m-hide{
+    display:none;
+  }
+  .col-l-hide{
+    display:block;
+  }
+}
+
+//大屏
+//@media screen and (min-width:@num2){
+//  .loop(l);
+//  .container{width:@num2;}
+//  .col-s-hide{
+//    display:block;
+//  }
+//  .col-m-hide{
+//    display:block;
+//  }
+//  .col-l-hide{
+//    display:none;
+//  }
+//}
+
+
+
+//栅格化的核心代码
+.loop(@type:s,@i:1) when (@i<=@cols){
+  .container>.row>.col-@{type}-@{i}{
+     float:left;
+     width:@i/@cols*100%;
+     position:relative;
+  }
+  .container-fluid>.row>.col-@{type}-@{i}{
+    float:left;
+    width:@i/@cols*100%;
+    position:relative;
+ }
+  .loop(@type,@i+1);
+}
+
+
+
+
+//清除浮动的函数
+.clear(){
+  &:before,&:after{
+    content:"";
+    display:block;
+  }
+  &:after{
+    clear:both;
+  }
+}
+
+
+
+
+
+
+

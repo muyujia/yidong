@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<style>
+    canvas{
+        background:#eee;
+    }
+</style>
+</head>
+<body>
+<canvas width="300" height="300"></canvas>
+<audio src="audio/太想爱你.mp3" controls="controls" autoplay="autoplay"></audio>
+</body>
+</html>
+<script>
+    var audio=document.querySelector("audio");
+    var canvas=document.querySelector("canvas");
+    var cobj=canvas.getContext("2d");
+    var audioObj=new AudioContext();
+    var sources=audioObj.createMediaElementSource(audio);  //音频源
+    var analyser=audioObj.createAnalyser();                //分析器
+    //音频源-分析器-与输出设备连接
+    sources.connect(analyser);
+    analyser.connect(audioObj.destination);
+
+    setInterval(function(){
+        cobj.clearRect(0,0,300,300);
+        var array=new Uint8Array(analyser.frequencyBinCount);
+        analyser.getByteFrequencyData(array);
+        var rate=array.length/canvas.width;
+        cobj.save();
+        cobj.translate(0,300);
+        cobj.beginPath();
+        for(var i=0;i<array.length;i++){
+            cobj.lineTo(i,-array[i]);
+        }
+        cobj.stroke();
+        cobj.restore();
+    },40)
+</script>
+
+
