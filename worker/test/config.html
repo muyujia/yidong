@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../public/js/angular/angular.min.js"></script>
+</head>
+<body ng-app="myapp">
+   <div ng-controller="ctrl"></div>
+
+</body>
+<script>
+    angular.module("ng-app",[]).factory("ABC",function(){
+       return "aaa"
+    }).controller("ctrl",function(){
+        console.log(ABC());
+    })
+</script>
+</html>

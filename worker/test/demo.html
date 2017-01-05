@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<ul>
+    <li ng-repeat="item in data">
+        <span ng-click="change($index)">{{item.name}}</span>
+        <ul ng-show="$index==a">
+            <li ng-repeat="item1 in item.son">{{item1.name}}</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>
