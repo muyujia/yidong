@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="node_modules/react/dist/react.js"></script>
+    <script src="node_modules/react-dom/dist/react-dom.js"></script>
+    <script src="node_modules/babel-standalone/babel.js"></script>
+</head>
+
+<body>
+<div id="root"></div>
+<script type="text/babel">
+    class Time extends React.Component{
+        constructor(){
+            super();
+            this.state={time:0};
+        }
+        onClick() {
+            this.setState((prevState) => ({
+               time: prevState.time+ 1
+            }));
+        }
+
+        componentDidMount() {
+            this.interval = setInterval(() => this.onClick(), 1000);
+        }
+        render(){
+           return <div>
+               time:{this.state.time}
+           </div>
+        }
+    }
+
+  ReactDOM.render(<Time/>,document.getElementById("root"))
+
+</script>
+</body>
+</html>

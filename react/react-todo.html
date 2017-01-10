@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="node_modules/react/dist/react.js"></script>
+    <script src="node_modules/react-dom/dist/react-dom.js"></script>
+    <script src="node_modules/babel-standalone/babel.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+    class Title extends React.Component{
+        constructor(){
+            super();
+        }
+        render(){
+            return <h3>{this.props.title}</h3>
+        }
+    }
+
+    class List extends React.Component{
+        constructor(){
+            super();
+        }
+        render(){
+            return (
+                    <ul>
+                    {
+                        this.props.listData.map((a, b) => {
+                        return <li key={b}>{a.con}</li>
+                      })
+                    }
+             </ul>
+           )
+        }
+    }
+    class Todo extends React.Component{
+        constructor(){
+            super();
+            this.state={text:"",arr:[]};
+            this.change=this.change.bind(this);    //事件绑定，改变指针指向
+            this.click=this.click.bind(this);
+        }
+        change(e){
+            var val=e.target.value;
+            this.state.text=val;
+        }
+        click(){
+            var obj={
+                con:this.state.text
+            }
+//            console.log(obj);
+            this.setState(function(prev){
+                console.log(prev)
+                return  {
+                   arr:prev.arr.concat(obj)
+                }
+
+            })
+        }
+        render(){
+            return (
+                <div>
+                    <Title title="备忘录"/>
+                    <List listData={this.state.arr}/>
+                    <input type="text" onChange={this.change}/>
+                    <input type="button" value="发送" onClick={this.click}/>
+                </div>
+           )
+        }
+    }
+
+    // 渲染页面
+    ReactDOM.render(<Todo/>,document.getElementById("root"));
+</script>
+</body>
+</html>

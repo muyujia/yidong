@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="node_modules/react/dist/react.js"></script>
+    <script src="node_modules/react-dom/dist/react-dom.js"></script>
+    <script src="node_modules/babel-standalone/babel.js"></script>
+    <script src="node_modules/remarkable/dist/remarkable.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+    class  Input extends React.Component{
+        constructor(props){
+            super(props);
+            this.state={value:"在此输入内容"};
+            this.change=this.change.bind(this);
+        }
+        change(){
+            this.setState({value: this.refs.textarea.value});
+        }
+        getRawMarkup() {
+            var md = new Remarkable();
+            return { __html: md.render(this.state.value) };
+        }
+        render(){
+            return  (
+                <div>
+                    <h3>Input</h3>
+                    <textarea name="" id="" cols="30" rows="10" onChange={this.change} ref="textarea" defaultValue={this.state.value}></textarea>
+                    <h3>Output</h3>
+                    <div className="content" dangerouslySetInnerHTML={this.getRawMarkup()}/>
+                </div>
+           )
+        }
+    }
+
+    ReactDOM.render(<Input/>,document.getElementById("root"));
+</script>
+</body>
+</html>
